@@ -1,14 +1,21 @@
 import React from "react";
-
+import "./ExpenseItem.css";
 export default function ExpenseTracker() {
+  const expenseDate = new Date();
+  const expenseType = "Car Insurance";
+  const price = "$294.67";
+  const LocationOfExpenditure = "HyderaBad";
+
   return (
     <>
-      <h2>Lets get Started!</h2>
-      <h3>Expense Tracker</h3>
-      <h4>Expense Items</h4>
-      <p>Food: - Rs 10</p>
-      <p>Petrol: - Rs 100</p>
-      <p>Movies: - Rs 200</p>
+      <div className="expense-item">
+        <div>{expenseDate.toISOString()}</div>
+        <div className="expense-item__description">
+          <h2>{expenseType}</h2>
+          <h2>{LocationOfExpenditure}</h2>
+          <div className="expense-item__price">{price}</div>
+        </div>
+      </div>
     </>
   );
 }
