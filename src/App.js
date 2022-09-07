@@ -2,7 +2,7 @@ import "./App.css";
 import ExpenseTracker from "./compnents/ExpenseTracker";
 
 function App() {
-  return <ExpenseTracker />;
+  return <ExpenseTracker location="Bengaluru" />;
 }
 
 export default App;
